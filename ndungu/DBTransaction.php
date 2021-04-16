@@ -23,7 +23,7 @@ class DBTransaction {
         $this->pdo->beginTransaction();
     }
     
-    public function insertTransaction($sql, $data)
+    public function insertQuery($sql, $data)
     {
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute($data);
@@ -35,10 +35,14 @@ class DBTransaction {
         try {
             $this->pdo->commit();
         } catch(PDOException $e) {
-            $this->pdo->rollBack();
+            echo $e->getMessage();
+            var_dump($e);
+            // $this->pdo->rollBack();
             return false;
         }
 
-          return true;
+        return true;
     }
 }
+
+// write to francis on the dM 

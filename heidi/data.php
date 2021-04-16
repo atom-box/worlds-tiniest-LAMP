@@ -1,7 +1,7 @@
 <?php
 
 
-require_once './dbconfig.inc.php';
+require_once '../dbconfig.inc.php';
 
 $user = USER;
 $password = SECRET;
