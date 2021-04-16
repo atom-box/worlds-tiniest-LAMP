@@ -13,7 +13,6 @@
 <body>
   <div class="jumbotron text-center">
     <h1>LAMP setup notes</h1>
-    <h2>How I did it</h2>
     <p>I have <i>literally</i> named this page <strong>your_domain</strong>.</p>
   </div>
 
@@ -22,6 +21,7 @@
 
   <div class="container">
     <h2>Syntax and explanations</h2>
+    <p>Starting from a brand new machine this is every step I had to do.</p>
 
 
 
@@ -31,35 +31,35 @@
       <div class="card">
         <div class="card-body">
           <h4 class="card-title"> <code>      sudo apt install apache2</code>
-            <p class="card-text">notes</p>
+            <p class="card-text">Install Apache.</p>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body">
           <h4 class="card-title"> <code>      sudo ufw allow in "Apache"</code>
-            <p class="card-text">notes</p>
+            <p class="card-text">Make a rule for the firewall so you can get in.</p>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body">
           <h4 class="card-title"> <code>      sudo apt install mysql-server</code>
-            <p class="card-text">notes</p>
+            <p class="card-text">Step 1 for getting Mysql</p>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body">
           <h4 class="card-title"> <code>      sudo mysql_secure_installation</code>
-            <p class="card-text">notes</p>
+            <p class="card-text">Step 2 for getting Mysql</p>
         </div>
       </div>
 
       <div class="card">
         <div class="card-body">
           <h4 class="card-title"> <code>      sudo apt install php libapache2-mod-php php-mysql</code>
-            <p class="card-text">notes</p>
+            <p class="card-text">Sort of interesting: this single line seems to have given me enough PHP.  What about CLI?</p>
         </div>
       </div>
 
@@ -154,9 +154,53 @@
         </div>
       </div>
 
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title"> <code>     sudo mysql</code>
+            <code class="card-text">And then do the following</code>
+            <p class="card-text">show databases;</p>
+            <p class="card-text">CREATE DATABASE example_database; </p>
+            <p class="card-text">CREATE USER 'example_user'@'%' IDENTIFIED WITH mysql_native_password BY 'password';  </p>
+            <p class="card-text">GRANT ALL ON example_database.* TO 'example_user'@'%';
+            </p>
+          </div>
+        </div>
+        
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"> <code> mysql -u example_user -p
+            </code>
+              <p class="card-text">Confirm that your user can get back in!</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title"> <code>     sudo mysql</code>
+              <code class="card-text">Insert some lines.  Print them out from route called data.php</code>
+              <p class="card-text">show databases;</p>
+              <code class="card-text">
+                /var/www/your_domain/todo_list.php
+
+use the sample code at <a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mysql-php-lamp-stack-on-ubuntu-20-04" title="link to 14 lines of PHP code"></a>Digital Ocean's Step 6</a>.
+              </code>
+              </p>
+            </div>
+          </div>
+          
+  
+
+
+
     </div>
   </div>
 
+  <footer class="container-fluid text-center">
+    <a href="#top" title="To Top">
+      <span class="glyphicon glyphicon-chevron-up">^</span>
+    </a>
+    <p>Made by Evan at <a href="https://www.littlefurnace.com" title="Visit Little Furnace">Little Furnace</a></p>
+  </footer>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
