@@ -10,7 +10,13 @@ $database = NAMEOFDATABASE;
 $table = 'sessions';
 echo "<h1>This is the data.php page.</h1>";
 try {
-  $db = new \PDO("mysql:host=localhost;dbname=$database", $user, $password);
+  $db = new \PDO(
+    "mysql:host=localhost;
+    dbname=$database"
+    , 
+    $user, 
+    $password
+  );
   if (is_null($db)){
     var_dump($db); die;
   }
