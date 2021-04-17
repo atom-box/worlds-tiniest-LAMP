@@ -1,6 +1,7 @@
 <?php
 // DBTransaction.php
 
+// keep passwords in a separate file; list that file in .gitignore
 require_once '../dbconfig.inc.php';
 
 class DBTransaction {
