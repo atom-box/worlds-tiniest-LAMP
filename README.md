@@ -1,6 +1,6 @@
-# LAMP Demonstration
+# A very small LAMP stack
 
-## To run 
+## To run the ndungu branch 
 1. Start apache. *If* neccessary:
 - `apt install apache2`
 - `sudo apt install php libapache2-mod-php php-mysql`
