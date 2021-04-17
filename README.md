@@ -1,6 +1,7 @@
 # A very small LAMP stack
 
 ## To run the ndungu branch 
+
 1. Start apache. *If* neccessary:
 - `apt install apache2`
 - `sudo apt install php libapache2-mod-php php-mysql`
@@ -32,4 +33,9 @@ This uses the PDO object and its methods:
 
 The construct function for PDO is where the password and username and database get applied.
 
+## The heidi branch 
+
+Has:
+* __index.html__ useful html/css that I styled from scratch
+* __data.php__ an alternate PDO object way to hook up minimally to mysql
 
