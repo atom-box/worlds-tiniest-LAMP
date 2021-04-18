@@ -36,6 +36,6 @@ The construct function for PDO is where the password and username and database g
 ## The heidi branch 
 
 Has:
-* __index.html__ useful html/css that I styled from scratch
-* __data.php__ an alternate PDO object way to hook up minimally to mysql
+* __index.html__ useful html/css to save
+* __data.php__  use PDO object to get db contents. Has Try-Catch.
 
